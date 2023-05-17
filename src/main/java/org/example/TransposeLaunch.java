@@ -17,7 +17,7 @@ public class TransposeLaunch {
 
     public static void main(String[] args) throws IOException {
         Transpose a = new Transpose("input.txt");
-        a.transposes();
+        a.transpose();
 
     }
     private void launch(String[] args) {

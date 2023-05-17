@@ -44,7 +44,7 @@ public class Transpose extends File {
         }
     }
 
-    public void transposes() {
+    public void transpose() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"))) {
             rowsAndColumns();
             fillMatrix();
