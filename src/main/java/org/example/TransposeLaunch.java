@@ -15,7 +15,7 @@ public class TransposeLaunch {
     @Argument(required = true,metaVar = "DoCut",usage = "Cut word if not fits")
     private String cut;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Transpose a = new Transpose("input.txt");
         a.transpose();
 
