@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5bab03-63ad-4a29-98fc-b180808e4f27" name="Changes" comment="Gureumi jjwak kkin">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TransposeLaunch.java" afterDir="false" />
+    <list default="true" id="6a5bab03-63ad-4a29-98fc-b180808e4f27" name="Changes" comment="i'm a queencard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Transpose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Transpose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TransposeLaunch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TransposeLaunch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,25 +41,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.TransposeLaunch">
-    <configuration name="TransposeLaunch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TransposeLaunch" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.TransposeLaunch" />
       <module name="Lab2" />
+      <option name="PROGRAM_PARAMETERS" value="-a 11 -t -r -o output.txt input.txt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
@@ -86,14 +84,12 @@
       <option name="JAR_PATH" value="$PROJECT_DIR$/lib/args4j-2.33.jar" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.TransposeLaunch" />
-        <item itemvalue="JAR Application.Lab2.jar" />
-        <item itemvalue="JAR Application.Lab2-1.0-SNAPSHOT.jar" />
-        <item itemvalue="JAR Application.args4j-2.33.jar" />
-      </list>
-    </recent_temporary>
+    <list>
+      <item itemvalue="Application.TransposeLaunch" />
+      <item itemvalue="JAR Application.args4j-2.33.jar" />
+      <item itemvalue="JAR Application.Lab2-1.0-SNAPSHOT.jar" />
+      <item itemvalue="JAR Application.Lab2.jar" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -111,7 +107,28 @@
       <option name="project" value="LOCAL" />
       <updated>1683494044163</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cha cha cha">
+      <created>1684352972208</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684352972208</updated>
+    </task>
+    <task id="LOCAL-00003" summary="i'm a queencard">
+      <created>1684353180056</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684353180056</updated>
+    </task>
+    <task id="LOCAL-00004" summary="i'm a queencard">
+      <created>1684353231426</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684353231426</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -130,7 +147,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Gureumi jjwak kkin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gureumi jjwak kkin" />
+    <MESSAGE value="cha cha cha" />
+    <MESSAGE value="i'm a queencard" />
+    <option name="LAST_COMMIT_MESSAGE" value="i'm a queencard" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

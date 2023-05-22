@@ -2,26 +2,35 @@ package org.example;
 
 
 import java.io.*;
+import java.util.Scanner;
 
 
-public class Transpose extends File {
+public class Transpose {
 
     private String[][] matrix;
-    private String[][] newMatrix;
-    private int matRaws = 0;
-    private int matCol = 0;
+    private int raws = 0;
+    private int column = 0;
 
-    public Transpose(String pathname) {
-        super(pathname);
+    private String num;
+    private String t;//cut if not fits
+    private String r;//align to right
+    private String inputName;
+    private String outputName;
+
+    public Transpose(String t, String r, String num) {
+        this.num = num;
+        this.t = t;
+        this.r = r;
     }
 
+
     private void rowsAndColumns() throws IOException {
-        try (BufferedReader reader = new BufferedReader(new FileReader("input.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(inputName))) {
             String b;
             while ((b = reader.readLine()) != null) {
-                matRaws += 1;
+                raws += 1;
                 int t = b.split(" +").length;
-                matCol = Math.max(t, matCol);
+                column = Math.max(t, column);
             }
         } catch (IOException e) {
             throw new FileNotFoundException();
@@ -29,11 +38,11 @@ public class Transpose extends File {
     }
 
     private void fillMatrix() throws IOException {
-        try (BufferedReader r = new BufferedReader(new FileReader("input.txt"))) {
-            matrix = new String[matRaws][matCol];
+        try (BufferedReader r = new BufferedReader(new FileReader(inputName))) {
+            matrix = new String[raws][column];
             String l = r.readLine();
             while (l != null) {
-                for (int i = 0; i < Math.max(matCol, matRaws); i++) {
+                for (int i = 0; i < Math.max(column, raws); i++) {
                     for (int j = 0; j < l.split(" +").length; j++) {
                         matrix[i][j] = l.split(" +")[j];
                     }
@@ -44,11 +53,25 @@ public class Transpose extends File {
         }
     }
 
-    public void transpose() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"))) {
+    public void transpose(String inputName, String outputName) throws IOException {
+        this.inputName = inputName;
+        this.outputName = outputName;
+        if (inputName == null) {
+            System.out.println("Input your text here:");
+            Scanner t = new Scanner(System.in);
+            File temp = new File("tempInput.txt");
+            try (BufferedWriter tem = new BufferedWriter(new FileWriter(temp))) {
+                while (t.hasNext()) {
+                    tem.write(t.nextLine());
+                }
+            } catch (IOException e) {
+                throw new IllegalArgumentException();
+            }
+        }
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputName))) {
             rowsAndColumns();
             fillMatrix();
-            newMatrix = new String[matCol][matRaws];
+            String[][] newMatrix = new String[column][raws];
             for (int i = 0; i < matrix.length; i++) {
                 for (int j = 0; j < matrix[i].length; j++) {
                     if (matrix[i][j] == null || matrix[i][j].matches(" +")) newMatrix[j][i] = "";
@@ -57,7 +80,7 @@ public class Transpose extends File {
             }
             for (String[] strings : newMatrix) {
                 for (String string : strings) {
-                    if(!string.equals("")) {
+                    if (!string.equals("")) {
                         writer.write(string + " ");
                     }
 
