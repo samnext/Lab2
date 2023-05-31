@@ -2,9 +2,8 @@ package org.example;
 
 import org.kohsuke.args4j.*;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Scanner;
-import java.util.SortedMap;
 
 public class TransposeLaunch {
 
@@ -12,11 +11,11 @@ public class TransposeLaunch {
     private String num;
     @Option(name = "-o", metaVar = "ofile", usage = "Output file name")
     private String outputFileName;
-    @Argument(metaVar = "-t", usage = "Cut word if not fits")
-    private String cut;
-    @Argument(metaVar = "-r", usage = "Align to right")
-    private String align;
-    @Argument(metaVar = "file", usage = "Input file name")
+    @Option(name = "-t", metaVar = "-t", usage = "Cut word if not fits")
+    private boolean cut;
+    @Option(name = "-r", metaVar = "-r", usage = "Align to right")
+    private boolean align;
+    @Argument(metaVar = "Input file name")
     private String inputFileName;
 
     public static void main(String[] args) throws IOException {
@@ -28,16 +27,17 @@ public class TransposeLaunch {
         CmdLineParser parser = new CmdLineParser(this);
         try {
             parser.parseArgument(args);
-            System.out.println(parser.getArguments());
-        } catch (CmdLineException exception) {
-            System.err.println(exception.getMessage());
+        } catch (CmdLineException e) {
+            System.err.println(e.getMessage());
             System.err.println();
             parser.printUsage(System.err);
-        } try {
-            Transpose t = new Transpose(cut, align, num);
-            t.transpose(inputFileName, outputFileName);
-        } catch (IOException e) {
-            System.err.println(e.getMessage());
         }
+        Transpose text = new Transpose(cut, align,num);
+        try {
+            text.transpose(inputFileName, outputFileName);
+        } catch (IOException e) {
+            throw new FileNotFoundException();
+        }
+
     }
 }
